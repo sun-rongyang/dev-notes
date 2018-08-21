@@ -115,7 +115,7 @@ Another reason why Python is so popular now is that is has a lot of high-quailty
   import numpy as np
   def binding_sort(*args, which_one=0, inverse=False):
     sorted_idx = args[which_one].argsort()
-    if inverse: sorted_idx = np.flip(sorted_idx, axis=0)
+    if inverse: sorted_idx = sorted_idx[::-1]   # Flip the vector elements.
     return list(vec[sorted_idx] for vec in args)
   ```
 
