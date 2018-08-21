@@ -8,7 +8,7 @@ _Rongyang Sun_
 #### Pure Python project
 
 The minimal file structure for a pure python package project which uses `unittest` as its unit test tool looks like
-```python
+```bash
 .
 |-- setup.py                     # Distribution stript.
 `-- src                          # Source directory.
