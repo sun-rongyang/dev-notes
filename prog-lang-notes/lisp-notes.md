@@ -111,3 +111,62 @@ $ sbcl --script hello.lisp
 Hello, World!
 ```
 
+
+
+## Basic syntax and operation
+
+### List and Atom
+
+For Lisp, we only have two elementary structures: **list** and **atom**.
+
+- Lists are surrounded by parentheses, like
+
+  ```lisp
+  (1 2 3)
+  ()
+  ((a b) c)
+  (+ 1 2)
+  ```
+
+- Atoms are separated by whitespace or parentheses, like
+
+  ```lisp
+  1	; A number
+  a	; A symbol
+  b-3
+  @foo
+  ```
+
+  Note: `b-3` is one atom, not a arithmetic express. Except **number**, other atoms are **symbol**.
+
+### Form and Evaluation
+
+- **Form** can be either an atom or list. 
+
+- **Evaluation** means get its value.
+
+- Form is meant to be evaluated.
+
+  - If a form is an atom, Lisp treat is as a name and try to return its value.
+
+    ```lisp
+    * 1 ; A number is an atom.
+    1	; Number is self-evaluating, i.e. return ifself.
+    ```
+
+  - If a form is list, treats the form as a function call. The first element is as the name of the function. The remaining elements are _arguments_.
+
+    ```lisp
+    * (+ 1 2)
+    3
+    ```
+
+  - Lisp first evaluates the arguments (from left to right), then evaluates the first element to get its function, then applies the function to the argument. (Special forms and macros can change argument evaluation.)
+
+    ```lisp
+    * (+ (- 2 1) (* 3 4))
+    ; First: (+ 1 (* 3 4))
+    ; Second: (+ 1 12)
+    ; Third: 13
+    13
+    ```
