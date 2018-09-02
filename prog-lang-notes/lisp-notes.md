@@ -149,10 +149,30 @@ For Lisp, we only have two elementary structures: **list** and **atom**.
 
   - If a form is an atom, Lisp treat is as a name and try to return its value.
 
-    ```lisp
-    * 1 ; A number is an atom.
-    1	; Number is self-evaluating, i.e. return ifself.
-    ```
+    - **Number** is self-evaluating atom.
+
+        ```lisp
+        * 1 ; A number is an atom.
+        1	; Number is self-evaluating, i.e. return ifself.
+        ```
+
+    - **keyword** is self-evaluating atom. Keyword is a symbol which start from a `:`.
+
+      ```lisp
+      * :foo
+      :FOO
+      ```
+
+    - Except keywords, there are only two symbols which is self-evaluating, true `T` and false `NIL`.
+
+      ```lisp
+      * t
+      T
+      *nil
+      NIL
+      ```
+
+      
 
   - If a form is list, treats the form as a function call. The first element is as the name of the function. The remaining elements are _arguments_.
 
