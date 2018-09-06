@@ -130,14 +130,21 @@ For Lisp, we only have two elementary structures: **list** and **atom**.
 
 - Atoms are separated by whitespace or parentheses, like
 
-  ```lisp
+  ```commonlisp
   1	; A number
   a	; A symbol
   b-3
   @foo
   ```
 
-  Note: `b-3` is one atom, not a arithmetic express. Except **number**, other atoms are **symbol**.
+  Note: `b-3` is one atom, not a arithmetic express. Except **number**, other atoms are **symbol**. Alphabet in a symbol is case-insensitive:
+
+  ```lisp
+  * (eq 'a 'a) ; test equivalence. This is a lisp form, later for more detail.
+  T
+  ```
+
+  
 
 ### Form and Evaluation
 
@@ -190,3 +197,41 @@ For Lisp, we only have two elementary structures: **list** and **atom**.
     ; Third: 13
     13
     ```
+
+### Symbol
+
+- A symbol is just a name.
+
+- A symbol can be the name of a common value or a function.
+
+- _Unusual_, a symbol can be the name of a function and the name of a variable at the same time! Lisp knows that whether a symbel is called as a function.
+
+  ```commonlisp
+  * (setq first 'number-one)
+  NUMBER-ONE
+  * (first (list 3 2 1))
+  3
+  * first
+  NUMBER-ONE
+  ```
+
+### Value
+
+- Value is the meaning of data. The data are storaged at the special location of  the memory. 
+
+- A value can have more than one name. That is usual. It is the meaning of a pointer in other languages. Two names (like tow pointers) point to one special location of the memory (valaue).
+
+  ```commonlisp
+  [1]> (setq l1 (list 'a 'b 'c))
+  (A B C)
+  [2]> (setq l2 l1)
+  (A B C)
+  [3]> (eq l1 l2)
+  T
+  [4]> (setq l3 (list 'a 'b 'c))
+  (A B C)
+  [5]> (eq l3 l1)
+  NIL
+  ```
+
+  `[#]>` is the command prompt in `clisp`, something like `sbcl`.
