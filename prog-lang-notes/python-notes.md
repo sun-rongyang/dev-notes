@@ -60,6 +60,15 @@ uname = (os.uname()).sysname
 import platform
 uname = platform.system()
 ```
+- Get the directory of the current script file.
+
+  ```python
+  import os
+  FILE_DIR = os.path.dirname(os.path.abspath(__file__))
+  ```
+
+  _Note: this method wil fail if this script file is called by `exec()` function from another script file._ 
+
 ## Third party libraries
 
 Another reason why Python is so popular now is that is has a lot of high-quailty and powerful third party libraries (packages) like `numpy`, `scipy` and `matplotlib`.
