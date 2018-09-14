@@ -16,4 +16,5 @@ _Notes: `/foo/` means `foo` folder under the root directory of the project._
 - Develop tools notes (`/dev-tool-notes/`)
   - Git notes (`/dev-tool-notes/git-notes.md`)
   - Vim notes (`/dev-tool-notes/vim-notes.md`)
+  - Tmux notes (`/dev-tool-notes/tmux-notes.md`)
 - Unarchived notes (`/unarchive-notes.md`)
