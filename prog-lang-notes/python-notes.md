@@ -160,7 +160,7 @@ Another reason why Python is so popular now is that is has a lot of high-quailty
   ```python
   import matplotlib.pyplot as plt
   
-  plt.minorticks_off(
+  plt.minorticks_off()
   ```
 
 
@@ -181,4 +181,18 @@ Another reason why Python is so popular now is that is has a lot of high-quailty
 
   For more detail, see https://pip.readthedocs.io/en/stable/installing/
 
-  
+
+### Python environment variables
+
+#### `PYTHONPATH`
+
+- Let `YCM` to complete your own python modules
+
+  Add your own python modules path to the `PYTHONPATH`, then the `YCM` will complete it.
+
+  ```bash
+  $ export PYTHONPATH="$YOUR_OWN_PYMOD_PATH:$PYTHONPATH"
+  ```
+
+  For more detail about `PYTHONPATH`, see https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH
+
