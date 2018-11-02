@@ -104,3 +104,35 @@
 
 _Read a string as a variable or write a variable to a string._
 
+
+
+## Develop tools
+
+### Documentation
+
+#### ford
+
+_[ford](https://github.com/Fortran-FOSS-Programmers/ford) can Automatically generates FORtran Documentation from comments within the code._
+
+- Cite a structure or a function(subroutine) in the documentation comment.
+
+  Use `[[type_name_or_routine_name]]`, for example
+
+  ```fortran
+  subroutine ConvertDogToCat(dog_, cat_)
+    implicit none
+    type(Dog), intent(in) :: dog_
+    	!! A [[Dog]] instance.
+    type(Cat), intent(out) :: cat_
+    
+    ...
+  end subroutine ConvertDogToCat
+  ```
+
+- Turn on source code display in the final document website.
+
+  Use `source: true` in the ford control markdown file of the project.
+
+  _Note: Use `function foo(bar) result(baz)` style function to display function source code._
+
+- 

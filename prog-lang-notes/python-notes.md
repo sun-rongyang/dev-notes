@@ -150,4 +150,35 @@ Another reason why Python is so popular now is that is has a lot of high-quailty
   [array([0.72046521, 0.49801333, 0.26922479, 0.0594317 ]), array([0.78940445, 0.24147948, 0.28484671, 0.45235445])]
   ```
 
+
+
+
+### Matplotlib
+
+- Turn off subticks in log axis scale
+
+  ```python
+  import matplotlib.pyplot as plt
+  
+  plt.minorticks_off(
+  ```
+
+
+## Environment configuration
+
+### Package management
+
+#### pip
+
+- Install `pip`
+
+  Although the `pip` tool will be installed when you install python in most cases, you can install `pip` for a given python interpreter `PYTHON_INTERPRETER`:
+
+  ```bash
+  $ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  $ PYTHON_INTERPRETER get-pip.py
+  ```
+
+  For more detail, see https://pip.readthedocs.io/en/stable/installing/
+
   
