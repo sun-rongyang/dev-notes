@@ -1,5 +1,17 @@
 # Linux notes
 
+## Distributions
+
+### Clear Linux
+#### Installation (From Mac or Linux)
+- Download image file
+
+Download the `img` file from https://download.clearlinux.org/image/ . If you can let your machine connect to the Internet directly, download the file end with `installer.img.xz`. Or if you must through a verification from a webpage, download the file end with `live-desktop-beta.img.xz`.
+
+- Burn the `img` onto a USB derive
+
+
+
 ## Unarchived
 
 ### HowTo
@@ -16,5 +28,4 @@
   # Send SIGCONT to resume.
   kill -CONT $PID
   ```
-
-  
+ 
